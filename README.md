@@ -1,3 +1,3 @@
-## Welcome to favarete.art
+### About
 
-# This Page is Under Construction
+This is the source code for favarete.art website
