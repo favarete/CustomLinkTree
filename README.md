@@ -1,31 +1,37 @@
-# Favarete's Gallery
+# Gatsby's Typescript + Material-ui starter
 
-## About
-[favarete.art](https://favarete.art/) is my personal online art gallery, it contains my paints, tattoos, cryptoart, blog posts etc. The site is entirely developed using React, Typescript, GraphQL and other cool technologies. To host on github pages I use Gatsby to build stact files to deploy for this repository
+Kick off your project with this [Material-ui](https://material-ui.com/) boilerplate (forked from [this](https://github.com/Junscuzzy/gatsby-material-typescript-starter) repository and edited with personal preferences). 
 
-Licenses
---------
+This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
-#### Manifesto and all Texts<br />
+_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
 
-<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a><br />
+## 🚀 Quick start
 
-<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+1.  **Create a Gatsby site.**
 
-#### Original Works of Art <br />
+    Use the Gatsby CLI to create a new site, specifying the default starter.
 
-<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a><br />
+    ```shell
+    # create a new Gatsby site using the starter
+    gatsby new gatsby-material-typescript-starter https://github.com/Lindeneg/gatsby-material-typescript-starter
+    ```
 
-<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+1.  **Start developing.**
 
-#### Remixes from Unsplash <br />
+    Navigate into your new site’s directory and start it up.
 
-<a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/legalcode">CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</a><br />
+    ```shell
+    cd gatsby-material-typescript-starter/
+    yarn develop
+    ```
 
-<a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/legalcode"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/p/zero/1.0/88x31.png" /></a>
+1.  **Open the source code and start editing!**
 
-#### Website Source and All Other Software<br />
+    Your site is now running at `http://localhost:8000`!
 
-<a rel="license" href="https://www.gnu.org/licenses/agpl-3.0.html">GNU Affero General Public License v3.0</a><br />
+    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
-<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="GNU AGPLv3 License" style="border-width:0" src="https://www.gnu.org/graphics/agplv3-155x51.png" /></a>
+    Open the `gatsby-material-typescript-starter` directory in your code editor of choice and edit `src/pages/index.tsx`. Save your changes and the browser will update in real time!
+
+All the commands are in your `package.json > scripts`.

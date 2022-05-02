@@ -1,0 +1,28 @@
+{
+  "elements": [
+    {
+      "title": "Website",
+      "link": "https://favarete.art",
+      "subLinks": []
+    },
+    {
+      "title": "Personal Store",
+      "link": "https://favarete.art/store",
+      "subLinks": []
+    },
+    {
+      "title": "Third-Party Stores",
+      "link": "",
+      "subLinks": [
+        {
+          "title": "Colab55",
+          "link": "https://colab55.com"
+        },
+        {
+          "title": "Other",
+          "link": "https://other.com"
+        }
+      ]
+    }
+  ]
+}
