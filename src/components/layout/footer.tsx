@@ -12,7 +12,6 @@ const useStyles = makeStyles((theme: Theme) => ({
         position: 'fixed',
         width: '100%',
         backgroundColor: theme.palette.background.paper,
-        justifyContent: 'center'
     },
     text: {
         textAlign: "center"
@@ -23,23 +22,9 @@ const Footer: FC = () => {
     const styles = useStyles();
     return (
         <footer className={styles.footer}>
-            <Container maxWidth="md">
-                <Typography className={styles.text} variant="body1" color="textSecondary">
-                    © {new Date().getFullYear()}, Built with
-                    {` `}
-                    <Link href="https://www.gatsbyjs.org" color="inherit">
-                        Gatsby
-                    </Link>
-                    ,{` `}
-                    <Link href="https://www.typescriptlang.org" color="inherit">
-                        Typescript
-                    </Link>{' '}
-                    and
-                    {` `}
-                    <Link href="https://material-ui.com/" color="inherit">
-                        @Material-ui
-                    </Link>
-                    ,
+            <Container maxWidth="md" className={styles.text}>
+                <Typography variant="body2" color="textSecondary">
+                    {`Built by Rodrigo Favarete`}
                 </Typography>
             </Container>
         </footer>

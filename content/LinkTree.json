@@ -16,11 +16,51 @@
       "subLinks": [
         {
           "title": "Colab55",
-          "link": "https://colab55.com"
+          "link": "https://www.colab55.com/@rodrigofavarete"
         },
         {
-          "title": "Other",
-          "link": "https://other.com"
+          "title": "Threadless",
+          "link": "https://rodrigofavarete.threadless.com/"
+        },
+        {
+          "title": "Hic Et Nunc (NFTs)",
+          "link": "https://www.hicetnunc.xyz/tz/tz1WQGhuPcsACPuTwxYJ2RVCkXiHJiNh462j"
+        }
+      ]
+    },
+    {
+      "title": "Tattoo Requests",
+      "link": "https://forms.gle/n2BSefAxkDmBk5b17",
+      "subLinks": []
+    },
+    {
+      "title": "Lidimist Manifesto",
+      "link": "https://lidimismo.art/",
+      "subLinks": []
+    },
+    {
+      "title": "Other Social Networks",
+      "link": "",
+      "subLinks": [
+        {
+          "title": "Twitter",
+          "link": "https://twitter.com/RodrigoFavarete"
+        },
+        {
+          "title": "Mastodon",
+          "link": "https://mastodon.art/@favarete"
+        },
+        {
+          "title": "Peepeth",
+          "link": "https://peepeth.com/favarete"
+        },
+        {
+          "title": "Deviantart",
+          "link": "https://www.deviantart.com/favarete"
+        },
+        {
+          "title": "WTSocial",
+          "link": "https://wt.social/u/rodrigo-favarete"
         }
       ]
     }

@@ -8,7 +8,9 @@ import ExpertButton from "../components/pieces/button";
 
 const useStyles = makeStyles((theme: Theme) => ({
     heroButtons: {
-        marginTop: '1rem'
+        marginTop: '1rem',
+        marginBottom: '5rem',
+        textAlign: 'center'
     }
 }));
 
@@ -28,13 +30,18 @@ const IndexPage: FC = () => {
                                 link
                             }
                         }
+                        instagramLink
+                        instagramUser
+                        name
+                        location
                     }
                 }
             }
         }
     `)
 
-    const jsonData = jsonFile.allContentJson.edges[0].node.elements;
+    const jsonData = jsonFile.allContentJson.edges[1].node.elements;
+    const instagram = jsonFile.allContentJson.edges[0].node
 
     return (
         <>
@@ -42,9 +49,10 @@ const IndexPage: FC = () => {
             <Lazy type="grow" delay={500} timeout={1000} mountOnEnter unmountOnExit>
                 <div>
                     <Hero
-                        title="Hi people"
-                        description="Welcome to your new Gatsby site. Now go build something great with
-          Typescript and Material-ui."
+                        instagram={instagram.instagramLink}
+                        instagramUser={instagram.instagramUser}
+                        instagramName={instagram.name}
+                        instagramLocation={instagram.location}
                     />
                     <div className={styles.heroButtons}>
                         <Grid>

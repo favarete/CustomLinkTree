@@ -1,14 +1,17 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/styles';
 import {Button, Menu, MenuItem, Theme} from '@material-ui/core';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 import {FCC} from '../../util';
 
 const useStyles = makeStyles((theme: Theme) => ({
     heroContent: {
         backgroundColor: theme.palette.primary.main,
-        padding: theme.spacing(0, 1, 0)
+        padding: theme.spacing(0, 0, 0),
+        margin: theme.spacing(1, 1,1, 1),
+        color: theme.palette.text.hint,
+        width: "95%",
+        height: "2.5rem"
     },
     subMenu: {
         marginTop: theme.spacing(16.5),
@@ -34,6 +37,9 @@ const ExpertButton: FCC<ButtonProps> = (props) => {
     const handleMultiComponentClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         setAnchorEl(event.currentTarget);
     };
+    const handleSubmenuClick = (event: any) => {
+        alert(event);
+    };
     const handleMultiComponentClose = () => {
         setAnchorEl(null);
     };
@@ -45,7 +51,6 @@ const ExpertButton: FCC<ButtonProps> = (props) => {
             }}
             className={styles.heroContent}
             variant="contained"
-            fullWidth
         >
             {title}
         </Button>
@@ -58,11 +63,10 @@ const ExpertButton: FCC<ButtonProps> = (props) => {
                 aria-haspopup="true"
                 aria-expanded={open ? 'true' : undefined}
                 onClick={handleMultiComponentClick}
-                endIcon={<KeyboardArrowDownIcon/>}
+                // endIcon={<KeyboardArrowDownIcon/>}
                 className={styles.heroContent}
                 variant="contained"
                 disableElevation
-                fullWidth
             >
                 {title}
             </Button>
@@ -85,7 +89,9 @@ const ExpertButton: FCC<ButtonProps> = (props) => {
                 {
                     submenu.map(
                         (item: any) =>
-                            <MenuItem key={item.title} className={styles.subMenuItem} onClick={handleMultiComponentClose} disableRipple>
+                            <MenuItem key={item.title} className={styles.subMenuItem}
+                                      onClick={() => handleSubmenuClick(item.link)}
+                                      disableRipple>
                                 {item.title}
                             </MenuItem>
                     )

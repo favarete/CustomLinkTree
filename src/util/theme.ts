@@ -27,32 +27,32 @@ const light: ThemeOptions = {
     palette: {
         type: 'light',
         primary: {
-            main: '#1582e8'
+            main: '#1d1d1d'
         },
         secondary: {
-            main: '#7cd2f7'
+            main: '#be00ff'
         },
         error: {
-            main: '#f03e3e'
+            main: '#be00ff'
         },
         warning: {
-            main: '#f0a04f'
+            main: '#be00ff'
         },
         info: {
-            main: '#709ecc'
+            main: '#be00ff'
         },
         success: {
-            main: '#4fe054'
+            main: '#be00ff'
         },
         text: {
-            primary: '#343a40',
-            secondary: '#2e3133',
-            hint: '#363c42',
-            disabled: '#48494a'
+            primary: '#818181',
+            secondary: '#1f1f1f',
+            hint: '#eaeaea',
+            disabled: '#be00ff'
         },
         background: {
-            default: '#f2f2f2',
-            paper: '#dce3f2'
+            default: '#eaeaea',
+            paper: '#ffffff'
         }
     }
 };
@@ -61,32 +61,32 @@ const dark: ThemeOptions = {
     palette: {
         type: 'dark',
         primary: {
-            main: '#0d3054'
+            main: '#eaeaea'
         },
         secondary: {
-            main: '#0b1e26'
+            main: '#be00ff'
         },
         error: {
-            main: '#870505'
+            main: '#be00ff'
         },
         warning: {
-            main: '#964c00'
+            main: '#be00ff'
         },
         info: {
-            main: '#09539c'
+            main: '#be00ff'
         },
         success: {
-            main: '#034d06'
+            main: '#be00ff'
         },
         text: {
-            primary: '#f8f9fa',
-            secondary: '#e4e7eb',
-            hint: '#bbbcbd',
-            disabled: '#ccc'
+            primary: '#b8b8b8',
+            secondary: '#eaeaea',
+            hint: '#000000',
+            disabled: '#be00ff'
         },
         background: {
-            default: '#1c2c33',
-            paper: '#162024'
+            default: '#1c1b1b',
+            paper: '#000000'
         }
     }
 };

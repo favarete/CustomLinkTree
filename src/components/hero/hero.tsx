@@ -1,41 +1,62 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/styles';
-import { Typography, Container, Theme } from '@material-ui/core';
+import {makeStyles} from '@material-ui/styles';
+import {Container, Theme, Typography} from '@material-ui/core';
+import {Avatar, Grid, Link} from '@mui/material';
+import user from '../../../content/images/user.jpg'
 
-import { FCC } from '../../util';
+import {FCC} from '../../util';
 
 const useStyles = makeStyles((theme: Theme) => ({
     heroContent: {
         backgroundColor: theme.palette.background.paper,
-        padding: theme.spacing(0, 0, 1)
+        padding: theme.spacing(2, 0, 2),
+        display: 'flex'
+    },
+    image: {
+        margin: theme.spacing(0, 0, 1),
+    },
+    avatar: {
+        display: 'flex',
+        justifyContent: 'center'
     }
 }));
 
 export interface HeroProps {
-    title: string | JSX.Element;
-    description?: string | JSX.Element;
+    instagram: string | JSX.Element;
+    instagramUser: string | JSX.Element;
+    instagramName: string | JSX.Element;
+    instagramLocation: string | JSX.Element;
 }
 
 const Hero: FCC<HeroProps> = (props) => {
     const styles = useStyles();
     return (
         <div className={styles.heroContent}>
-            <Container maxWidth="sm">
-                {typeof props.title === 'string' ? (
-                    <Typography component="h1" variant="h2" align="center" gutterBottom>
-                        {props.title}
+            <Container className={styles.avatar}>
+                <Grid
+                    container
+                    direction="column"
+                    justifyContent="center"
+                    alignItems="center"
+                >
+                    <Avatar
+                        className={styles.image}
+                        src={user}
+                        sx={{width: 90, height: 90}}
+                    />
+                    {/*@ts-ignore*/}
+                    <Typography variant="h6" color="textSecondary">
+                        <Link href={props.instagram} color="inherit">
+                            {props.instagramUser}
+                        </Link>
                     </Typography>
-                ) : (
-                    props.title
-                )}
-                {typeof props.description === 'string' ? (
-                    <Typography variant="h5" align="center" paragraph>
-                        {props.description || ''}
+                    <Typography variant="body2" color="textSecondary">
+                        {props.instagramName}
                     </Typography>
-                ) : (
-                    props.description
-                )}
-                {props.children}
+                    <Typography variant="body2" color="textSecondary">
+                        {props.instagramLocation}
+                    </Typography>
+                </Grid>
             </Container>
         </div>
     );

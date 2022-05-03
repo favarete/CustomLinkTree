@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
-import { Link as GatsbyLink } from 'gatsby';
-import { AppBar, Toolbar, Typography, Link, Button, Tooltip } from '@material-ui/core';
-import { Theme, makeStyles } from '@material-ui/core/styles';
-import { BsToggleOn, BsToggleOff } from 'react-icons/bs';
+import React, {useEffect, useState} from 'react';
+import {AppBar, Button, Toolbar, Tooltip} from '@material-ui/core';
+import {makeStyles, Theme} from '@material-ui/core/styles';
+import {BsToggleOff, BsToggleOn} from 'react-icons/bs';
 
-import { FC } from '../../util';
+import {FC} from '../../util';
 
 const useStyles = makeStyles((theme: Theme) => ({
     root: {
@@ -25,7 +24,7 @@ export interface HeaderProps {
 }
 
 const Header: FC<HeaderProps> = (props) => {
-    const [showOn, setShowOn] = useState<boolean>(false);
+    const [showOn, setShowOn] = useState<boolean>(true);
     const styles = useStyles();
 
     const onSwitch = (): void => {
@@ -33,21 +32,38 @@ const Header: FC<HeaderProps> = (props) => {
         props.switchTheme();
     };
 
-    const isDarkTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+    // const fixTheme = (isLight: boolean) => {
+    //     if (isLight) {
+    //         setShowOn(false);
+    //     } else {
+    //         setShowOn(true);
+    //     }
+    //     props.switchTheme();
+    // }
+    //
+    // useEffect(() => {
+    //     if (typeof window !== 'undefined') {
+    //         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    //             fixTheme(false)
+    //         } else {
+    //             fixTheme(true)
+    //         }
+    //     }
+    // }, []);
+    //
+    // if (typeof window !== 'undefined') {
+    //     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+    //         event.matches ? fixTheme(false) : fixTheme(true);
+    //     });
+    // }
 
-    console.log(isDarkTheme);
 
     return (
         <AppBar component="header" position="static" className={styles.root}>
             <Toolbar>
-                <Typography variant="h6" className={styles.title}>
-                    <Link to="/" component={GatsbyLink} color="inherit" className={styles.link}>
-                        {props.siteTitle || ''}
-                    </Link>
-                </Typography>
                 <Tooltip title="switch theme">
                     <Button onClick={onSwitch}>
-                        {showOn ? <BsToggleOn size="40" /> : <BsToggleOff size="40" />}
+                        {showOn ? <BsToggleOn size="40"/> : <BsToggleOff size="40"/>}
 
                     </Button>
                 </Tooltip>
