@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     heroContent: {
         backgroundColor: theme.palette.primary.main,
         padding: theme.spacing(0, 0, 0),
-        margin: theme.spacing(1, 1,1, 1),
+        margin: theme.spacing(1, 1, 1, 1),
         color: theme.palette.text.hint,
         width: "95%",
         height: "2.5rem"
@@ -38,7 +38,7 @@ const ExpertButton: FCC<ButtonProps> = (props) => {
         setAnchorEl(event.currentTarget);
     };
     const handleSubmenuClick = (event: any) => {
-        alert(event);
+        location.replace(event);
     };
     const handleMultiComponentClose = () => {
         setAnchorEl(null);
@@ -46,9 +46,7 @@ const ExpertButton: FCC<ButtonProps> = (props) => {
 
     const getSingleComponent = (title: string, link: any) =>
         <Button
-            onClick={() => {
-                alert(link);
-            }}
+            onClick={() => handleSubmenuClick(link)}
             className={styles.heroContent}
             variant="contained"
         >
